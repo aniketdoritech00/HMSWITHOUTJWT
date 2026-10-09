@@ -1,0 +1,319 @@
+/*---------------------------------------------- FORM's CSS---------------------------------------------------- */
+
+.inputForm{
+  font-size:14px; border:none; 
+}
+
+.inputForm:focus{
+ outline: none;
+
+}
+
+.selectbox{
+	padding:5px 10px;
+	border:1.5px solid #dadada;
+}
+
+
+
+.clicked{
+  border-bottom: 3px solid #088395;
+}
+
+.dropdown-content {
+font-size:17px;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+
+
+.dropdown-content a {
+	font-size:17px;
+	text-align: center;
+  padding: 1px 5px;
+  text-decoration: none;
+  display: block;
+  color: #333;
+}
+
+.dropdown-content a:hover {
+  background-color: dodgerblue;
+  color:floralwhite;
+}
+.google-form {
+  max-width: 1212px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #eff3f2;
+  border-top: 12px solid #443ea2;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+ 
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #4285f4;
+}
+
+main {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+footer {
+  text-align: center;
+}
+
+button , .questionType {
+  padding: 5px 20px;
+ background:#443ea2;
+  color: #fff;
+ 
+  border: none;
+  font-size:17px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.required{
+	position:absolute;
+	top:-150%;
+	right:270%;
+}
+
+
+@media (max-width:1024px){
+
+  .imageVideo{
+    top:32%;
+    right:15%;
+  }
+  
+  .dropdown{
+    top:17%;
+    right:15%;
+  }
+}
+
+@media (min-width:1025px) and (max-width:1180px) {
+
+  .imageVideo{
+    top:32%;
+    right:20%;
+  }
+  
+  .dropdown{
+    top:17%;
+    right:20%;
+  }
+}
+@media (min-width:1181px) and (max-width:1365px) {
+
+  .imageVideo{
+    top:31%;
+  }
+  
+  .dropdown{
+    top:17%;
+    right:25%;
+  }
+}
+
+@media (min-width:1370px) and (max-width:1460px) {
+
+  .imageVideo{
+    top:30%;
+    right:25%;
+  }
+  
+  .dropdown{
+    top:17%;
+    right:26%;
+  }
+}
+
+@media (min-width:1461px) and (max-width:1600px) {
+
+  .imageVideo{
+    top:31%;
+    left:25.5%;
+  }
+  
+  .dropdown{
+    top:45%;
+    right:26%;
+  }
+  
+  
+}
+
+@media (min-width:1601px) and (max-width:1790px) {
+
+  .imageVideo{
+    top:38%;
+    right:26%;
+    
+
+  }
+  
+  .dropdown{
+    top:17%;
+    right:30%;
+  }
+}
+
+@media (min-width:1791px) and (max-width:2150px) {
+
+  .imageVideo{
+    top:30%;
+    right:35%;
+
+  }
+  
+  .dropdown{
+    top:17%;
+    right:35%;
+  }
+}
+
+@media (min-width:2151px) and (max-width:2560px) {
+
+  .imageVideo{
+    top:30%;
+    right:37%;
+
+  }
+  
+  .dropdown{
+    top:17%;
+    right:37%;
+  }
+}
+
+/* -----------------------------------------------Toggler------------------------------------------------------ */
+.switch, .switch2 {
+  position: absolute;
+  top:-2.2rem;
+  right:-2rem;
+  display: inline-block;
+  width: 45px;
+  height: 20px;
+}
+
+.switch2 {
+  right: 2rem;
+  font-weight:bold;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+      top: -2px;
+    left: 6px;
+    right: -12px;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 7px;
+}
+
+input:checked + .slider {
+  background-color: #088395;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/*------------------------------- Rounded sliders -------------------------------------------*/
+.slider.round {
+  border-radius: 34px;
+}
+
+/*
+.slider.round:before {
+  border-radius: 50%;
+} */
+
+
+
+        .checkbox-label {
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+       
+
+        .remove-button {
+            width: 6%;
+            font-size: 18px;
+            position: relative;
+            top: -2rem;
+            right: 1rem;
+            background: #E53935;
+        }
+
+       
+        @media screen and (max-width: 768px) {
+            .remove-button {
+                width: 100%;
+                margin-top: 1rem;
+                right: 0;
+            }
+        }
+
+       
+        .switch2 {
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        
+        @media screen and (max-width: 768px) {
+            .switch2 {
+                display: block;
+                margin-bottom: 1rem;
+            }
+            
+        .inputForm {
+        width: 50%;
+    }
+        }

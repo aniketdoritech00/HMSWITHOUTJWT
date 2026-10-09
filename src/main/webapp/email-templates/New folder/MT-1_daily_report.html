@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Daily Report – DI-HMS</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root { --primary:#028BD7; --primary-dark:#0267a0; --primary-light:#e8f4fc; --border:#d0e8f5; --text:#1a2b3c; --muted:#5a7080; }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'DM Sans',sans-serif;background:#f0f6fb;color:var(--text);padding:30px 16px;display:flex;justify-content:center;}
+  .email-wrapper{max-width:700px;width:100%;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 8px 40px rgba(2,139,215,0.15);}
+  .header{background:linear-gradient(135deg,var(--primary),var(--primary-dark));padding:28px 36px;display:flex;align-items:center;gap:16px;position:relative;overflow:hidden;}
+  .header::before{content:'';position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,0.07);}
+  .logo{background:#fff;border-radius:8px;padding:8px 14px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;color:var(--primary);z-index:1;flex-shrink:0;}
+  .header-text{z-index:1;}
+  .header-text h1{font-family:'Montserrat',sans-serif;font-size:17px;font-weight:700;color:#fff;}
+  .header-text p{font-size:11.5px;color:rgba(255,255,255,0.72);margin-top:3px;}
+  .strip{padding:9px 28px;font-size:10.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;background:#e8f5e9;border-left:4px solid #2e7d32;color:#1b5e20;}
+  .body{padding:28px 36px;}
+  .to-block{font-size:13px;line-height:1.8;color:#3a4a5a;margin-bottom:16px;}
+  .to-block strong{color:var(--primary);}
+  .blank{display:inline-block;min-width:110px;border-bottom:1.5px solid var(--primary);color:var(--primary);font-style:italic;font-size:12px;}
+  .subj-box{background:var(--primary-light);border:1.5px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:20px;}
+  .subj-box .lbl{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--primary);margin-bottom:3px;}
+  .subj-box .val{font-family:'Montserrat',sans-serif;font-weight:700;font-size:13.5px;color:var(--text);}
+  .greeting{font-weight:600;font-size:13.5px;margin-bottom:8px;}
+  .intro{font-size:13px;line-height:1.8;color:#4a5a6a;margin-bottom:22px;}
+  .section-label{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--primary);margin-bottom:9px;text-decoration:underline;text-underline-offset:3px;}
+  .table-wrap{border-radius:8px;overflow:hidden;border:1.5px solid var(--border);margin-bottom:22px;}
+  table{width:100%;border-collapse:collapse;font-size:12px;}
+  thead th{background:var(--primary);color:#fff;padding:10px 13px;text-align:left;font-family:'Montserrat',sans-serif;font-weight:700;font-size:9.5px;letter-spacing:0.8px;text-transform:uppercase;white-space:nowrap;}
+  tbody tr{border-top:1px solid #eef5fb;}
+  tbody tr:nth-child(even){background:#f5fbff;}
+  tbody td{padding:10px 13px;color:#2a3a4a;vertical-align:middle;}
+  .ticket{font-family:'Montserrat',sans-serif;font-weight:700;font-size:10px;background:var(--primary-light);color:var(--primary);padding:2px 7px;border-radius:4px;}
+  .wk{color:#27ae60;font-weight:700;}
+  .nwk{color:#e74c3c;font-weight:700;}
+  .esc-tag{font-size:10px;background:#f3e5f5;color:#7b1fa2;padding:2px 8px;border-radius:10px;font-weight:700;}
+  .website-box{text-align:center;padding:14px;border:1.5px dashed var(--border);border-radius:8px;margin-bottom:20px;}
+  .website-box p{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:4px;}
+  .website-box a{font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;color:var(--primary);text-decoration:underline;}
+  .thanks{font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;color:var(--primary);margin-bottom:22px;}
+  .divider{height:1.5px;background:linear-gradient(to right,var(--primary),#e8f4fc);margin-bottom:18px;}
+  .footer{font-size:12.5px;line-height:1.9;color:#4a5a6a;}
+  .footer .regards{font-weight:600;color:var(--text);margin-bottom:4px;}
+  .footer .co{font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;color:var(--primary);}
+  .footer a{color:var(--primary);}
+  .bottom{background:var(--primary);padding:11px 28px;display:flex;justify-content:space-between;}
+  .bottom p{font-size:10px;color:rgba(255,255,255,0.7);}
+</style>
+</head>
+<body>
+<div class="email-wrapper">
+  <div class="header">
+    <div class="logo">DIGITALS<br>INDIA</div>
+    <div class="header-text">
+      <h1>Digitals Monitoring Centre</h1>
+      <p>Security Products Pvt. Ltd. — Corporate Office, Noida</p>
+    </div>
+  </div>
+  <div class="strip">📊 Daily Health Monitoring Report</div>
+  <div class="body">
+    <div class="to-block">
+      <strong>TO:</strong> Zonal Office,<br>
+      <span class="blank">{{zonal_office}}</span>
+    </div>
+    <div class="subj-box">
+      <div class="lbl">Subject</div>
+      <div class="val">DI-HMS &nbsp;|&nbsp; ZONAL OFFICE, {{zonal_office}} &nbsp;|&nbsp; DAILY REPORT - AS ON {{report_date}}</div>
+    </div>
+    <p class="greeting">Dear Sir / Mam,</p>
+    <p class="intro">The daily report for health monitoring at your branches is as follows:</p>
+
+    <p class="section-label">Overview</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Total Branches</th>
+            <th>System Installed</th>
+            <th>Working</th>
+            <th>Not Working</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- {{overview_rows}} — API se inject karo:
+          <tr>
+            <td>{{product}}</td>
+            <td>{{total_branches}}</td>
+            <td>{{system_installed}}</td>
+            <td class="wk">{{working}}</td>
+            <td class="nwk">{{not_working}}</td>
+          </tr>
+          -->
+          <tr><td>CCTV</td><td>{{total_branches}}</td><td>{{system_installed}}</td><td class="wk">{{working}}</td><td class="nwk">{{not_working}}</td></tr>
+          <tr><td>LOCKER CCTV</td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>SECURITY ALARM</td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>FIRE ALARM</td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="section-label">Pending Issues</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Ticket No.</th>
+            <th>Branch Name</th>
+            <th>Product</th>
+            <th>Alert</th>
+            <th>S.I. Name</th>
+            <th>Dt. of First Info</th>
+            <th>Reminder Sent On</th>
+            <th>Current Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- {{pending_rows}} — API se inject karo:
+          <tr>
+            <td><span class="ticket">{{ticket_no}}</span></td>
+            <td>{{branch_name}}</td>
+            <td>{{product}}</td>
+            <td>{{alert}}</td>
+            <td>{{si_name}}</td>
+            <td>{{first_info_dt}}</td>
+            <td>{{reminder_dates}}</td>
+            <td><span class="esc-tag">{{status}}</span></td>
+          </tr>
+          -->
+          <tr>
+            <td><span class="ticket">{{ticket_no}}</span></td>
+            <td>{{branch_name}}</td>
+            <td>{{product}}</td>
+            <td>{{alert}}</td>
+            <td>{{si_name}}</td>
+            <td>{{first_info_dt}}</td>
+            <td>{{reminder_dates}}</td>
+            <td><span class="esc-tag">{{status}}</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="website-box">
+      <p>For More Information, Kindly Log Onto &amp; Login Using Your Credentials</p>
+      <a href="http://www.digitalshealthmonitoring.in" target="_blank">WWW.DIGITALSHEALTHMONITORING.IN</a>
+    </div>
+
+    <p class="thanks">Thanking You!</p>
+    <div class="divider"></div>
+    <div class="footer">
+      <div class="regards">Warm Regards,</div>
+      Digitals Monitoring Centre,<br>
+      <span class="co">DIGITALS INDIA SECURITY PRODUCTS PVT. LTD.</span><br>
+      Corporate Office, Noida<br>
+      {{phone}} | <a href="mailto:cms@digitalsindia.com">cms@digitalsindia.com</a>
+    </div>
+  </div>
+  <div class="bottom">
+    <p>© Digitals India Security Products Pvt. Ltd.</p>
+    <p>Confidential Communication</p>
+  </div>
+</div>
+</body>
+</html>

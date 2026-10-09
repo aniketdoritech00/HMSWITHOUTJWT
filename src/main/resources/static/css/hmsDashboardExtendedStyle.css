@@ -1,0 +1,659 @@
+/*---------------------------------AI-POP UP START------------------*/
+
+
+   .ai-popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 10000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .ai-popup-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Popup Container */
+        .ai-popup {
+            background: linear-gradient(135deg, #028bd7 0%, #4a90e2 100%);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            color: white;
+            position: relative;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(2, 139, 215, 0.3);
+            transform: translateY(-50px) scale(0.8);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .ai-popup-overlay.show .ai-popup {
+            transform: translateY(0) scale(1);
+        }
+
+        /* Close Button */
+        .ai-popup-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .ai-popup-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg);
+        }
+
+        /* AI Icon with Animation */
+        .ai-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            animation: aiPulse 2s infinite;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+
+        @keyframes aiPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Title Styling */
+        .ai-popup h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            animation: slideInFromTop 0.6s ease-out 0.2s both;
+        }
+
+        /* Subtitle */
+        .ai-popup .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+            animation: slideInFromBottom 0.6s ease-out 0.4s both;
+        }
+
+        /* Features List */
+        .ai-features {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+
+        .ai-features li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+            font-size: 1rem;
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+
+        .ai-features li:nth-child(1) { animation-delay: 0.6s; }
+        .ai-features li:nth-child(2) { animation-delay: 0.8s; }
+        .ai-features li:nth-child(3) { animation-delay: 1s; }
+
+        .ai-features li i {
+            margin-right: 10px;
+            color: #66d9ff;
+            font-size: 1.2rem;
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            margin-top: 30px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #66d9ff, #ffffff);
+            border-radius: 2px;
+            width: 0%;
+            animation: progressFill 4s linear forwards;
+        }
+
+        @keyframes progressFill {
+            to { width: 100%; }
+        }
+
+        /* Animations */
+        @keyframes slideInFromTop {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInFromBottom {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Sparkle Animation */
+        .sparkle {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+            animation: sparkleFloat 3s infinite;
+        }
+
+        .sparkle:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+        .sparkle:nth-child(2) { top: 30%; right: 15%; animation-delay: 1s; }
+        .sparkle:nth-child(3) { bottom: 25%; left: 20%; animation-delay: 2s; }
+        .sparkle:nth-child(4) { bottom: 35%; right: 25%; animation-delay: 0.5s; }
+
+        @keyframes sparkleFloat {
+            0%, 100% { 
+                opacity: 0.3; 
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% { 
+                opacity: 1; 
+                transform: translateY(-10px) rotate(180deg);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .ai-popup {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+            
+            .ai-popup h2 {
+                font-size: 2rem;
+            }
+            
+            .ai-icon {
+                font-size: 3rem;
+            }
+        }
+
+
+
+/*---------------------------------AI-POP UP END------------------*/
+
+#loaderOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-spinner {
+    width: 40px;
+    height: 40px;
+    border: 5px solid #ccc;
+    border-top: 5px solid #028bd7;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    backdrop-filter: blur(6px);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+table thead th,
+table tbody td {
+  white-space: nowrap;
+}
+
+
+
+/* Set the text color inside the date range picker */
+#reportrange, 
+#reportrange span, 
+.daterangepicker {
+    color: black !important;
+}
+
+/* Ensure the dropdown menu options are also black */
+.daterangepicker .ranges li {
+    color: black !important;
+}
+
+/* Change the selected range option text color */
+.daterangepicker .ranges li:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+    color: black !important;
+}
+
+.zone-table{
+max-height:150px;
+overflow-y :auto;
+}
+
+.card-bodyPie {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 10px;
+}
+
+.chart-container {
+	flex: 1;
+	padding: 5px;
+}
+
+canvas {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.chart-title {
+	margin-top: 5px;
+	text-align: center;
+	font-size: 14px;
+	color: black;
+}
+
+.legend-container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+
+.legend-item {
+	display: flex;
+	align-items: center;
+	margin: 0 10px;
+}
+
+.legend-color {
+	width: 15px;
+	height: 15px;
+	margin-right: 5px;
+	border-radius: 50%;
+}
+.lColor{
+        color:black;
+        }
+#activeZonesBodyOne tr:first-child , #activeZonesBodyTwo tr:first-child {
+	display: none;
+}
+
+
+
+#chartdiv {
+  width: 100%;
+  height: 400px;
+}
+
+
+
+.black-text {
+    color: black !important;
+}
+
+
+
+
+/*------------------------------------------------------- CHATBOT CSS START------------------------------------------------------------------------------*/
+.chatbot-container {
+  position: fixed;
+  bottom: 20px; 
+  right: 0;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Chat Toggle Button - Style as shown in image */
+.chat-toggle-btn {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  cursor: pointer;
+  overflow: visible;
+  padding: 0;
+  margin-right: 0;
+  transition: all 0.3s ease;
+  position: relative;
+  height: 40px; /* Match the height in the image */
+}
+
+.chat-toggle-btn:hover {
+  transform: translateX(-5px);
+}
+
+.chat-bubble-text {
+  background: radial-gradient(circle, rgba(2, 139, 215, 1) 0%, rgba(16, 88, 204, 1) 50%);
+  color: white;
+  padding: 8px 20px; /* Reduced padding to match image */
+  font-weight: bold;
+  font-size: 14px;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase; /* Make text uppercase like in image */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.avatar-container {
+  width: 40px; /* Size to match image */
+  height: 40px; /* Size to match image */
+  overflow: visible;
+  border-radius: 50%;
+  position: relative;
+  background: white;
+  border: 2px solid #008CBA;
+  margin-left: -10px; /* Negative margin to overlap with text bubble */
+  z-index: 10;
+}
+
+.avatar-img {
+  width: 60px; /* Size to match image */
+  height: 58px; /* Size to match image */
+  position: absolute;
+  top: -7px; /* Fine-tuned positioning */
+  left: -15px; /* Fine-tuned positioning */
+  z-index: 11;
+}
+
+.close-icon {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #ccc;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  cursor: pointer;
+  z-index: 1060;
+}
+
+/* Rest of your CSS remains unchanged */
+.chatbot-wrapper {
+  position: absolute;
+  bottom: 60px; 
+  right: 20px; 
+  width: 480px;
+  height: 85vh;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform-origin: bottom right; 
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.chatbot-wrapper.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Chatbot Header */
+.chatbot-header {
+  background: radial-gradient(circle, rgba(2, 139, 215, 1) 0%, rgba(16, 88, 204, 1) 50%);
+  color: white;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-title {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.minimize-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+}
+
+/* Chatbot Body */
+.chatbot-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+  background-color: #f5f7fb;
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bot-message, .user-message {
+  max-width: 90%;
+  min-width:10%;
+  padding: 10px 15px;
+  border-radius: 15px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.bot-message {
+  align-self: flex-start;
+  background-color: #e9ecef;
+  color: #212529;
+  border-bottom-left-radius: 5px;
+}
+
+.user-message {
+  align-self: flex-end;
+  background-color: #e9ecef;
+  color: #1058CC;
+  border-bottom-right-radius: 5px;
+}
+
+
+.message-time {
+  font-size: 10px;
+  color: #1058CC;
+  position: absolute;
+  bottom: -18px;
+}
+
+.bot-message .message-time {
+  left: 5px;
+}
+
+.user-message .message-time {
+  right: 5px;
+  color: #1058CC;
+}
+
+/* Chatbot Footer */
+.chatbot-footer {
+  padding: 12px;
+  border-top: 1px solid #e9ecef;
+  background-color: #fff;
+}
+
+.chatbot-footer .input-group {
+  margin-bottom: 10px;
+}
+
+.send-btn {
+  background-color: #1058CC;
+  border-color: #0269a2;
+}
+
+.send-btn:hover {
+  background-color: #0269a2;
+  border-color: #1058CC;
+}
+
+
+.quick-actions {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+
+.quick-action-btn {
+  white-space: nowrap;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-color: #ced4da;
+}
+
+.quick-action-btn:hover {
+  background-color: #1058CC;
+  border-color: #6FE6FC;
+}
+
+
+
+.btn-outline-chatbot{
+	background-color: transparent;
+	color: #1058CC;
+	border: 1px solid #1058CC;
+	
+}
+
+.btn-outline-chatbot:hover{
+	background-color: transparent;
+	color:#003092;
+	border: 2px solid #003092;
+	
+}
+
+
+/* Message animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bot-message, .user-message {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Typing indicator styles */
+.typing-indicator {
+  padding: 8px 15px;
+}
+
+.typing-indicator .dots {
+  display: flex;
+}
+
+.typing-indicator .dots span {
+  height: 8px;
+  width: 8px;
+  margin-right: 3px;
+  border-radius: 50%;
+  background-color: #6c757d;
+  animation: typingBounce 1.2s infinite ease-in-out;
+}
+
+.typing-indicator .dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator .dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typingBounce {
+  0%, 60%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-4px);
+  }
+}
+
+/* For mobile responsiveness */
+@media (max-width: 576px) {
+  .chatbot-wrapper {
+    width: 300px;
+    height: 400px;
+    right: 60px;
+    bottom: 60px; /* Adjust for mobile */
+  }
+}
+/*----------------------------------------------------------------------HMS CHATBOT STYLING END------------------------------------------------------------------*/

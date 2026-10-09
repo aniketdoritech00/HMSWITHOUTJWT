@@ -1,0 +1,180 @@
+/*--------------------------------SCROLL BAR----------------------------------------------------*/
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #532460 #ffffff;
+  }
+
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: mediumpurple;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+  }
+ /*---------------------------------TRAINING MASTER-----------------------------------------------*/
+
+body {
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #443ea2;
+    text-align: left;
+    background-color: #e9edf4;
+    overflow-x: hidden;
+   
+}
+
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 2px solid #443ea2;
+    border-radius:5px;
+    box-shadow: 20px 20px 10px grey;
+}
+
+.card-body {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 0.2rem;
+}
+
+.card-header {
+    padding:0;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 2px solid #443ea2;
+    text-align: center;
+}
+
+.dataTables_wrapper{
+margin:2%;
+}
+
+.get-in-touch {
+  max-width: 900px;
+  margin: 5px auto;
+  position: relative;
+
+}
+
+.btn{
+	width:15%;
+	margin-left:2%;
+	background-color: #443ea2;
+	color:#ffffff;
+}
+
+.btn:hover{
+	background-color: #443ed9;
+}
+
+.contact-form .form-field {
+  position: relative;
+  margin: 20px 0;
+}
+.contact-form .input-text {
+  display: block;
+  width: 100%;
+  height: 30px;
+  border-width: 0 0 2px 0;
+  border-color:#5543ca;
+  font-size: 14px;
+  line-height: 10px;
+  font-weight: 400;
+}
+
+.contact-form .input-text:focus {
+  outline: none;
+}
+.contact-form .input-text:focus + .label,
+.contact-form .input-text.not-empty + .label {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+.contact-form .label {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #5543ca;
+  cursor: text;
+  transition: -webkit-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, 
+  -webkit-transform .2s ease-in-out;
+}
+
+.contact-form .submit-btn {
+  display: inline-block;
+  background-color:#443ea2;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 5px 10px;
+  border: none;
+  width:90px;
+  cursor: pointer;
+}
+
+.contact-form .submit-btn:hover{
+	background-color: #373193;
+}
+table th{
+	background-color: #ffffff;
+	color:#443ea2;
+}
+/*-------------------------------------- MODAL STYLING---------------------------------------------------*/
+
+.modal-dialog {
+    max-width: 100% !important;
+    margin-top:0;
+    overflow-y: initial !important
+    
+}
+
+.modal-content {
+	width:100%;
+    background: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(10px); 
+    border: none;
+    margin-top:0;
+    height:100vh;
+    overflow-y: auto; 
+}
+
+.modal-header{
+	height:50px;
+}
+
+/*-------------------------------------------------------MEDIA QUERY-----------------------------------------------------------------*/
+
+@media (max-width:500px){
+	#addTrainingModalButton{
+		font-size:11px;
+	}
+}
+

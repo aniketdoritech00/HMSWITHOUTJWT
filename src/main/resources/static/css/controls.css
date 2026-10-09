@@ -1,0 +1,245 @@
+/*-------------------------------------------------SCROLL BAR----------------------------------------------------------*/
+*::-webkit-scrollbar {
+    width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #028bd7;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+}
+
+/*-------------------------------------HMS EMPLOYEE MASTER STYLING--------------------------------------------------*/
+
+body {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: #028bd7;
+    text-align: left;
+    background-color: #F4F6FF;
+    overflow-x: hidden;
+}
+
+/*-------------------------------------------DATATABLE STYLING--------------------------------------------------------*/
+
+.row .card {
+    flex: 1;
+    position: relative;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 2px solid #003d87;
+    border-radius: 15px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px; 
+    margin: auto; 
+    height: 90vh; /* Dynamic height */
+    padding: 20px; /* Inner spacing */
+}
+
+.card-body {
+    flex: 1 1 auto;
+    width: 100%;
+    text-align: center; /* Centered content */
+    padding: 10px 15px;
+}
+
+.card-header {
+    padding: 10px 0;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 2px solid #028bd7;
+    text-align: center;
+    font-size: 1.2em; /* Slightly larger font for better readability */
+    font-weight: bold;
+}
+
+/*-----------------------------------------------FORM FIELDS STYLING--------------------------------------------*/
+
+ .heading{
+color: #ffffff;
+background-color: #003d87; 
+height:30px; 
+border-bottom: 2px solid #028bd7;  
+border-left: 20px solid #028bd7;
+padding-left: 10px;
+padding-top:5px;
+border-radius: 5px;
+}
+
+/* Display Box for Clicked Button */
+.display-box {
+    background-color: #fff;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+
+.display-icon {
+    font-size: 2.5em;
+    color: #028bd7;
+    margin-bottom: 10px;
+}
+
+.display-digitals {
+    font-size: 1.4em;
+    color: #1d1d1d;
+}
+
+.display-text {
+    font-size: 1.4em;
+    color: #028bd7;
+}
+
+/* Control Panel Container */
+.control-panel {
+    background-color: #E4E0E1;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons Grid */
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+
+/* Button Styles */
+.button {
+    background-color: #ffffff;
+    border: 2px solid #028bd7;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    color: #028bd7;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #028bd7;
+    color: #ffffff;
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styling */
+.button-icon {
+    font-size: 1.5em;
+}
+
+/* Text Styling */
+.button-label {
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+
+
+
+/* Bottom Navigation Styles */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F4F6FF;
+    padding: 10px 0;
+    border-top: 2px solid #003d87;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.bottom-nav .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #028bd7;
+    font-size: 0.8em;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.bottom-nav .nav-item i {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.bottom-nav .nav-item:hover i,
+.bottom-nav .nav-item:hover span {
+    color: #003d87; /* Highlight on hover */
+}
+
+/*------------------------------------------------FORM BUTTON---------------------------------------------------------*/
+
+/* Styles for Desktop Screens (1024px and above) */
+@media (min-width: 1024px) {
+    .row .card {
+        max-width: 800px;
+        height: auto;
+    }
+    .buttons-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    .control-panel {
+        width: 100%;
+        padding: 30px;
+    }
+    .bottom-nav {
+        display: none; /* Hide bottom navigation on desktop */
+    }
+}
+
+/* Styles for Mobile Screens (768px and below) */
+@media (max-width: 768px) {
+    .row .card {
+		height:75vh;
+        max-width: 100%;
+        margin: 0 10px;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .control-panel{
+		max-width:80vw;
+	}
+    
+}
+
+/* Styles for Tablet and Mobile Screens (1023px and below) */
+@media (max-width: 1023px) {
+    .bottom-nav {
+        display: flex; /* Show bottom navigation on mobile and tablet */
+    }
+    
+    .row .card{
+		max-height:80vh;
+	}
+    
+}

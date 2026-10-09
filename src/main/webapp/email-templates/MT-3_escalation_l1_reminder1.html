@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>S.I. First Email - DI-HMS</title>
+</head>
+<body style="font-family:Arial,sans-serif;background:#f0f6fb;color:#1a2b3c;padding:30px 16px;margin:0;">
+<div style="max-width:700px;width:100%;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 8px 40px rgba(2,139,215,0.15);margin:0 auto;">
+
+  <!-- HEADER -->
+  <div style="background:linear-gradient(135deg,#028BD7,#0267a0);padding:28px 36px;display:flex;align-items:center;gap:16px;">
+   
+    <div>
+      <h1 style="font-family:Arial,sans-serif;font-size:17px;font-weight:700;color:#fff;margin:0;">Digitals Monitoring Centre</h1>
+      <p style="font-size:11.5px;color:rgba(255,255,255,0.72);margin:4px 0 0;">Digitals India Security Products Pvt. Ltd. — Corporate Office, Noida</p>
+    </div>
+  </div>
+
+  <!-- STRIP -->
+  <div style="padding:9px 28px;font-size:10.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;background:#fff3cd;border-left:4px solid #f0a500;color:#7a5200;">
+    ⚠ {{zone_name}} Gadget Issue
+  </div>
+
+  <!-- BODY -->
+  <div style="padding:28px 36px;">
+
+    <!-- GREETING -->
+    <p style="font-weight:600;font-size:13.5px;margin-bottom:8px;margin-top:0;">Dear Sir / Ma'am,</p>
+
+    <!-- INTRO -->
+    <p style="font-size:13px;line-height:1.8;color:#4a5a6a;margin-bottom:22px;margin-top:0;">
+	It is bring to your notice that our branch is having issues in the {{zone_name}} Gadget(s), The details are as follows:
+    </p>
+
+    <!-- RESPONSIVE TABLE WRAPPER FOR EMAILS -->
+    <div style="border-radius:8px;overflow:hidden;border:1.5px solid #d0e8f5;margin-bottom:22px;">
+      <!--[if mso]>
+      <table width="100%" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;font-size:12px;">
+        <thead>
+          <tr>
+            <th style="background:#028BD7;color:#fff;padding:10px 13px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:9.5px;letter-spacing:0.8px;text-transform:uppercase;white-space:nowrap;">Ticket No.</th>
+            <th style="background:#028BD7;color:#fff;padding:10px 13px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:9.5px;letter-spacing:0.8px;text-transform:uppercase;white-space:nowrap;">Name of the Branch</th>
+            <th style="background:#028BD7;color:#fff;padding:10px 13px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:9.5px;letter-spacing:0.8px;text-transform:uppercase;white-space:nowrap;">Product</th>
+            <th style="background:#028BD7;color:#fff;padding:10px 13px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:9.5px;letter-spacing:0.8px;text-transform:uppercase;white-space:nowrap;">Alert</th>
+            <th style="background:#028BD7;color:#fff;padding:10px 13px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:9.5px;letter-spacing:0.8px;text-transform:uppercase;white-space:nowrap;">S.I. Name</th>
+            <th style="background:#028BD7;color:#fff;padding:10px 13px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:9.5px;letter-spacing:0.8px;text-transform:uppercase;white-space:nowrap;">Dt. of First Information</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:10px 13px;color:#2a3a4a;vertical-align:middle;border-top:1px solid #eef5fb;">
+              <span style="font-family:Arial,sans-serif;font-weight:700;font-size:10px;background:#e8f4fc;color:#028BD7;padding:2px 7px;border-radius:4px;">{{ticket_no}}</span>
+            </td>
+            <td style="padding:10px 13px;color:#2a3a4a;vertical-align:middle;border-top:1px solid #eef5fb;">{{branch_name}}</td>
+            <td style="padding:10px 13px;color:#2a3a4a;vertical-align:middle;border-top:1px solid #eef5fb;">{{product}}</td>
+            <td style="padding:10px 13px;color:#2a3a4a;vertical-align:middle;border-top:1px solid #eef5fb;">{{alert}}</td>
+            <td style="padding:10px 13px;color:#2a3a4a;vertical-align:middle;border-top:1px solid #eef5fb;">{{si_company}}</td>
+            <td style="padding:10px 13px;color:#2a3a4a;vertical-align:middle;border-top:1px solid #eef5fb;">{{first_info_dt}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <![endif]-->
+      <!--[if !mso]><!-- -->
+      <style>
+        @media only screen and (max-width: 600px) {
+          .responsive-table, .responsive-table thead, .responsive-table tbody, .responsive-table th, .responsive-table td, .responsive-table tr { display: block !important; width: 100% !important; }
+          .responsive-table thead { display: none !important; }
+          .responsive-table tr { margin-bottom: 18px !important; border-bottom: 2px solid #e8f4fc !important; }
+          .responsive-table td { text-align: left !important; padding-left: 45% !important; position: relative !important; min-height: 38px !important; }
+          .responsive-table td:before { position: absolute !important; left: 12px !important; top: 10px !important; width: 40%; white-space: nowrap; font-weight:700; color: #028BD7; font-size: 11px; }
+          .responsive-table td:nth-child(1):before { content: 'Ticket No.'; }
+          .responsive-table td:nth-child(2):before { content: 'Name of the Branch'; }
+          .responsive-table td:nth-child(3):before { content: 'Product'; }
+          .responsive-table td:nth-child(4):before { content: 'Alert'; }
+          .responsive-table td:nth-child(5):before { content: 'S.I. Name'; }
+          .responsive-table td:nth-child(6):before { content: 'Dt. of First Information'; }
+        }
+      </style>
+      <div style="width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;">
+       <table class="responsive-table" width="700" cellpadding="0" cellspacing="0" style="min-width:600px;width:100%;border-collapse:collapse;font-size:12px;">
+          <colgroup>
+  <col style="width:80px;">
+  <col style="width:130px;">
+  <col style="width:65px;">
+  <col style="width:210px;">
+  <col style="width:110px;">
+  <col style="width:155px;">
+</colgroup>
+          <thead>
+            <tr>
+              <th style="background:#028BD7;color:#fff;padding:10px 13px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:9.5px;letter-spacing:0.8px;text-transform:uppercase;white-space:nowrap;">Ticket No.</th>
+              <th style="background:#028BD7;color:#fff;padding:10px 13px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:9.5px;letter-spacing:0.8px;text-transform:uppercase;white-space:nowrap;">Name of the Branch</th>
+              <th style="background:#028BD7;color:#fff;padding:10px 13px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:9.5px;letter-spacing:0.8px;text-transform:uppercase;white-space:nowrap;">Product</th>
+              <td style="background:#028BD7;color:#fff;padding:10px 13px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:9.5px;letter-spacing:0.8px;text-transform:uppercase;border-top:1px solid #eef5fb; min-width:210px;">Alert</td>
+              <th style="background:#028BD7;color:#fff;padding:10px 13px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:9.5px;letter-spacing:0.8px;text-transform:uppercase;white-space:nowrap;">S.I. Name</th>
+              <th style="background:#028BD7;color:#fff;padding:10px 13px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:9.5px;letter-spacing:0.8px;text-transform:uppercase;white-space:nowrap;">Dt. of First Information</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:10px 13px;color:#2a3a4a;vertical-align:middle;border-top:1px solid #eef5fb;">
+                <span style="font-family:Arial,sans-serif;font-weight:700;font-size:10px;background:#e8f4fc;color:#028BD7;padding:2px 7px;border-radius:4px;">{{ticket_no}}</span>
+              </td>
+              <td style="padding:10px 13px;color:#2a3a4a;vertical-align:middle;border-top:1px solid #eef5fb;">{{branch_name}}</td>
+              <td style="padding:10px 13px;color:#2a3a4a;vertical-align:middle;border-top:1px solid #eef5fb;">{{product}}</td>
+              <td style="padding:10px 13px;color:#2a3a4a;vertical-align:middle;border-top:1px solid #eef5fb;">{{alert_type}}</td>
+              <td style="padding:10px 13px;color:#2a3a4a;vertical-align:middle;border-top:1px solid #eef5fb;">{{si_company}}</td>
+              <td style="padding:10px 13px;color:#2a3a4a;vertical-align:middle;border-top:1px solid #eef5fb;">{{first_info_dt}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--<![endif]-->
+    </div>
+
+    <!-- ACTION BOX -->
+    <div style="background:linear-gradient(135deg,#028BD7,#0267a0);border-radius:9px;padding:15px 20px;margin-bottom:18px;color:#fff;font-size:13px;line-height:1.6;">
+      <strong style="font-family:Arial,sans-serif;">You are requested to attend the branch on PRIORITY and resolve the issue at the earliest.</strong>
+    </div>
+
+    <!-- THANKS -->
+    <p style="font-family:Arial,sans-serif;font-weight:700;font-size:13px;color:#028BD7;margin-bottom:22px;margin-top:0;">Thanking You!</p>
+
+    <!-- DIVIDER -->
+    <div style="height:1.5px;background:linear-gradient(to right,#028BD7,#e8f4fc);margin-bottom:18px;"></div>
+
+    <!-- FOOTER -->
+    <div style="font-size:12.5px;line-height:1.9;color:#4a5a6a;">
+      <div style="font-weight:600;color:#1a2b3c;margin-bottom:4px;">Warm Regards,</div>
+      Digitals Monitoring Centre,<br>
+      <span style="font-family:Arial,sans-serif;font-weight:800;font-size:13px;color:#028BD7;">DIGITALS INDIA SECURITY PRODUCTS PVT. LTD.</span><br>
+      Corporate Office, Noida<br>
+      {{phone}} | <a href="mailto:cms@digitalsindia.com" style="color:#028BD7;">cms@digitalsindia.com</a>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div style="background:#028BD7;padding:11px 28px;display:flex;justify-content:space-between;">
+    <p style="font-size:10px;color:rgba(255,255,255,0.7);margin:0;">© Digitals India Security Products Pvt. Ltd.</p>
+    <p style="font-size:10px;color:rgba(255,255,255,0.7);margin:0;">Confidential Communication</p>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+/*-------------------------------------------------SCROLL BAR----------------------------------------------------------*/
+*::-webkit-scrollbar {
+    width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #028bd7;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+}
+
+/*-------------------------------------HMS EMPLOYEE MASTER STYLING--------------------------------------------------*/
+
+body {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: #028bd7;
+    text-align: left;
+    background-color: #F4F6FF;
+    overflow-x: hidden;
+}
+
+/*-------------------------------------------DATATABLE STYLING--------------------------------------------------------*/
+
+.row .card {
+    flex: 1;
+    position: relative;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 2px solid #003d87;
+    border-radius: 15px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    padding: 20px; /* Inner spacing */
+    max-height: 80vh;
+    max-width: 100%; 
+}
+
+
+/*-----------------------------------------------FORM FIELDS STYLING--------------------------------------------*/
+
+.heading{
+color: #ffffff;
+background-color: #003d87; 
+height:30px; 
+border-bottom: 2px solid #028bd7;  
+border-left: 20px solid #028bd7;
+padding-left: 10px;
+padding-top:5px;
+border-radius: 5px;
+}
+
+
+
+.notification-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 10px;
+    }
+    .notification-date {
+      font-weight: bold;
+      margin: 20px 0 10px;
+    }
+    .notification-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .icon {
+      font-size: 1.2rem;
+    }
+    .notification-time {
+      color: red;
+      font-weight: bold;
+    }
+    
+    
+    
+/* Bottom Navigation Styles */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F4F6FF;
+    padding: 10px 0;
+    border-top: 2px solid #003d87;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.bottom-nav .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #028bd7;
+    font-size: 0.8em;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.bottom-nav .nav-item i {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.bottom-nav .nav-item:hover i,
+.bottom-nav .nav-item:hover span {
+    color: #003d87; 
+}
+
+
+
+
+/*-------------------------------------------- Styles for Desktop Screens -------------------------------------*/
+@media (min-width: 1024px) {
+   
+   
+    .bottom-nav {
+        display: none; 
+    }
+}
+
+/* Styles for Mobile Screens (768px and below) */
+@media (max-width: 768px) {
+    .row .card {
+        max-width: 100%;
+        margin: 0 10px;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Styles for Tablet and Mobile Screens (1023px and below) */
+@media (max-width: 1023px) {
+    .bottom-nav {
+        display: flex; /* Show bottom navigation on mobile and tablet */
+    }
+    
+    .row .card{
+		height:72vh;
+	}
+    
+}

@@ -1,0 +1,197 @@
+/*--------------------------------SCROLL BAR----------------------------------------------------*/
+ 
+
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #028bd7;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+  }
+ /*---------------------------------TRAINING MASTER-----------------------------------------------*/
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    overflow-x: hidden;
+   
+}
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 2px solid #003d87;
+    border-radius:5px;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.card-body {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 0.2rem;
+}
+
+.card-header {
+    padding:0;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 2px solid #003d87;
+    text-align: center;
+}
+
+.dataTables_wrapper{
+margin:2%;
+}
+
+table tr th{
+	background-color: #028bd7;
+	color:#ffffff;
+}
+
+.get-in-touch {
+  max-width: 800px;
+  margin: 5px 10px;
+  position: relative;
+
+}
+
+
+
+.btn{
+	margin-left:2%;
+	background-color: #003d87;
+	color:#ffffff;
+	font-size: 13px;
+}
+
+.btn:hover{
+	background-color: #028bd7;
+	color: #DCECFE;
+}
+
+
+
+.contact-form .form-field {
+  position: relative;
+  margin: 20px 0;
+}
+.contact-form .input-text {
+  display: block;
+  width: 100%;
+  height: 30px;
+  border-width: 0 0 2px 0;
+  border-color:#1649A2;
+  font-size: 13px;
+  line-height: 10px;
+  font-weight: 400;
+}
+
+.contact-form .input-text:focus {
+  outline: none;
+}
+.contact-form .input-text:focus + .label,
+.contact-form .input-text.not-empty + .label {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+.contact-form .label {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #1649A2;
+  cursor: text;
+  transition: -webkit-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, 
+  -webkit-transform .2s ease-in-out;
+}
+
+.contact-form .submit-btn {
+  display: inline-block;
+  background-color:#6595FF;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+.heading{
+color: #ffffff;
+background-color: #003d87; 
+height:30px; 
+border-bottom: 2px solid #028bd7;  
+border-left: 20px solid #028bd7;
+padding-left: 20px;
+border-radius: 5px;
+}
+.contact-form .submit-btn:hover{
+	background-color: #003d87;
+}
+
+table th{
+	background-color: #ffffff;
+	color:#028bd7;
+}
+
+/*-------------------------------------- MODAL STYLING---------------------------------------------------*/
+
+.modal-dialog {
+    max-width: 100% !important;
+    margin-top:0;
+    overflow-y: hidden
+}
+
+.modal-body{
+    height: 100vh;
+    overflow-y: auto;
+
+}
+
+.modal-content {
+	 width:100%; background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(10px); border: none;
+    margin-top:0; height:100vh; overflow-y:auto;
+}
+
+.modal-header{
+	height:50px;
+}
+/*--------------------------------------------------MEDIA QUERY---------------------------------------------------------------------*/
+
+@media (max-width:500px){
+	#addGroupModalButton{
+		font-size:11px;
+	}
+}
+
+
+

@@ -1,0 +1,30 @@
+
+<configuration>
+
+    <appender name="TICKET_ESCALATION_FILE"
+              class="ch.qos.logback.core.FileAppender">
+
+        <file>logs/ticket-escalation.log</file>
+        <append>true</append>
+
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.doritech.api.Service.TicketEscalationService"
+            level="INFO"
+            additivity="false">
+        <appender-ref ref="TICKET_ESCALATION_FILE"/>
+    </logger>
+
+    <root level="INFO">
+        <appender name="CONSOLE"
+                  class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>%d{HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
+            </encoder>
+        </appender>
+    </root>
+
+</configuration>

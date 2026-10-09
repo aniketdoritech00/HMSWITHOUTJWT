@@ -1,0 +1,326 @@
+/*--------------------------------SCROLL BAR----------------------------------------------------*/
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #532460 #ffffff;
+  }
+
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: mediumpurple;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+  }
+ /*---------------------------------TRAINING MASTER-----------------------------------------------*/
+
+body {
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #443ea2;
+    text-align: left;
+    background-color: #e9edf4;
+    overflow: hidden;
+   
+}
+
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 2px solid #443ea2;
+    border-radius: 5px;
+    box-shadow: 20px 20px 10px grey;
+}
+
+.card-body {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 0.5rem;
+}
+
+.card-header {
+    padding:0;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 2px solid #443ea2;
+    text-align: center;
+}
+
+.dataTables_wrapper{
+margin:2%;
+}
+
+
+.dataTables_length{
+	display:none;
+}
+
+.get-in-touch {
+  max-width: 900px;
+  margin: 5px auto;
+  position: relative;
+
+}
+
+.btn{
+	width:15%;
+	margin-left:2%;
+	background-color: #443ea2;
+	border-radius: 5px;
+	color:#ffffff;
+}
+
+.btn:hover{
+	background-color: #443ed9;
+}
+
+
+.contact-form .form-field {
+  position: relative;
+  margin: 20px 0;
+}
+.contact-form .input-text {
+  display: block; width: 100%; height: 30px; border-width: 0 0 2px 0;
+  border-color:#5543ca; font-size: 14px; line-height: 10px; font-weight: 400;
+}
+
+
+.contact-form .input-text {
+  display: block; width: 100%; height: 30px;  border-width: 0 0 2px 0; border-color:#5543ca;
+  font-size: 14px; line-height: 10px; font-weight: 400;
+}
+
+.contact-form .training-heading{
+ position: absolute; left: 40px; bottom: 2px;; width: 90%; text-align: center;height: 30px;
+  border-width: 0 0 2px 0; font-size: 18px; text-transform: uppercase; line-height: 30px;
+  font-weight: 800; color: #5543ca; border-color:#ffffff; cursor: text;
+}
+.contact-form .textAreaField{
+display: block;   width: 100%;  height: 70px;  border-width: 0 0 0 0;  border-color:#5543ca;
+ font-size: 14px; line-height: 18px; font-weight: 400;
+}
+
+
+input[type="text"], textarea, button:disabled {
+  background-color: #ffffff;
+  color:black;
+}
+
+ button:disabled {
+  background-color: #B6BBC4;
+  color:black;
+}
+
+
+.contact-form .input-text:focus {
+  outline: none;
+}
+.contact-form .input-text:focus + .label,
+.contact-form .input-text.not-empty + .label {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+.contact-form .label {
+  position: absolute; left: 15px; bottom: 15px; font-size: 14px; line-height: 20px; font-weight: 500;
+  color: #5543ca; cursor: text; transition: -webkit-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out; transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+}
+
+
+.contact-form .input-text:focus {
+  outline: none;
+}
+.contact-form .input-text:focus + .label,
+.contact-form .input-text.not-empty + .label {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+.contact-form .label {
+  position: absolute; left: 15px; bottom: 15px; font-size: 14px; line-height: 20px; font-weight: 500;
+  color: #5543ca; cursor: text;
+  transition: -webkit-transform .2s ease-in-out; transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out,  -webkit-transform .2s ease-in-out;
+}
+
+.submit-btn,.audioVideoButton {
+  display: inline-block;background-color:#443ea2; color: #fff; 
+  text-transform: uppercase; font-size: 12px; padding: 5px 10px;
+  border: none;border-radius: 5px; width:120px; cursor: pointer;
+}
+
+.audioVideoButton{
+ position: absolute; bottom:20px; right: 10px;
+	
+}
+
+.contact-form .submit-btn:hover{
+	background-color: #373193;
+}
+
+table th{
+	background-color: #ffffff;
+	color:#443ea2;
+}
+
+/*-------------------------------------- MODAL STYLING---------------------------------------------------*/
+
+.modal-dialog {
+    max-width: 100% !important;
+    margin-top:0;
+    overflow-y: hidden
+}
+
+.modal-body{
+    height: 100vh;
+    overflow-y: auto;
+
+}
+
+.modal-content {
+	 width:100%; background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(10px); border: none;
+    margin-top:0; height:100vh; overflow-y:auto;
+}
+
+.modal-header{
+	height:50px;
+}
+
+
+/*-------------------------------------- Thumbnail STYLING---------------------------------------------------*/
+
+#documentFileContainer {
+    display: flex; flex-wrap: nowrap; overflow-x: auto;
+}
+
+.thumbnail {
+    width: 120px; height: 70px; margin: 5px; position: relative; overflow: hidden; flex: 0 0 auto; 
+}
+
+.pdf iframe,
+.video i,
+.document a,
+.mp3 i {
+    width: 100%;
+    height: 100%;
+}
+
+.document-info {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    
+}
+
+/*-------------------------------------------------STAR RATING-----------------------------------*/
+
+
+.star-rating {
+  line-height:32px;
+  font-size:1.7rem;
+  text-align: center;
+}
+
+.star-rating .fa-star{color: #443ea2;}
+
+/*-----------------------------------------------------------MEDIA QUERY----------------------------------------------------------*/
+
+
+
+    @media only screen and (max-width: 700px) {
+		
+		#trainingName{
+			font-size:14px;
+			width:50%;
+			margin-left:15%;
+		}
+        
+        #displayDocumentTable {
+            width: 100%;
+            margin-left: 0;
+        }
+        #displayDocumentTable thead {
+            display: none;
+        }
+        #displayDocumentTable tbody,
+        #displayDocumentTable tr,
+        #displayDocumentTable td {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        #displayDocumentTable tbody tr:nth-of-type(odd) {
+            background-color: #f2f2f2;
+        }
+        #displayDocumentTable tbody td:before {
+            content: attr(data-label);
+            font-weight: bold;
+            float: left;
+            text-transform: uppercase;
+        }
+        #displayDocumentTable tbody td:last-child {
+            border-bottom: none;
+        }
+        #displayDocumentTable tbody td:nth-child(1):before {
+            content: "Document Name: ";
+        }
+        #displayDocumentTable tbody td:nth-child(2):before {
+            content: "Status: ";
+        }
+        #displayDocumentTable tbody td:nth-child(3):before {
+            content: "View: ";
+        }
+        #displayDocumentTable tfoot {
+            display: block;
+            position: fixed;
+            left:8%;
+            bottom: 0;
+            width: 70%;
+            background-color: #fff;
+        }
+        #displayDocumentTable tfoot th,
+        #displayDocumentTable tfoot td {
+            width: 20.33%;
+            text-align: center;
+        }
+        #displayDocumentTable tfoot th {
+            background-color: #e6e6e6;
+        }
+    }
+
+/************************************************CSS FOR YOUTUBE LINK*****************************************/
+
+.clickable-link {
+    text-decoration: underline;
+    cursor: pointer;
+    color: black; /* Initial color, change as needed */
+}
+
+.clickable-link:hover {
+    color: blue; /* Color when hovering */
+}
+/************************************************CSS TO DISABLE RIGHT CLICK*****************************************/
+
+
+
+
+
+

@@ -1,0 +1,187 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+
+i{
+	width:20px;
+}
+.main-wrapper {
+    height: 100vh;
+}
+
+.company-footer {
+    position: fixed;
+    bottom: 0;
+    top: 85%;
+    width: 17.1875rem;
+    font-size: 12px;
+    text-align: center;
+   
+    color: #ffffff;
+    padding: 8px;
+    z-index: 1000;
+}
+
+.logoCenter {
+   display: inline-block;
+    width: 90px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    border: none;
+    background: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; 
+}
+
+.dropdown-menu {
+    position: absolute;
+    color: #1d1d1d;
+    top: 100%;
+    margin-bottom: 0;
+    right: 0;
+    min-width: 20rem;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    display: none; 
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    clear: both;
+    font-weight: normal;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-toggle {
+    text-decoration: none;
+    color: #333;
+}
+
+.menu-toggle:hover {
+    color: #555;
+}
+
+.dropdownfooter {
+    display: block;
+    text-align: right;
+    margin-bottom: -5%;
+    margin-top: -7%;
+    width: 100%;
+    color: white;
+    background-color: #003d87;
+}
+
+.dropdownHead {
+    display: block;
+    margin-top: -5%;
+    text-align: center;
+    width: 100%;
+    color: white;
+    background-color: #003d87;
+}
+
+.logoHms {
+    width: 40%;
+    margin-left: 20%;
+}
+
+.menu-toggle .nav-header .brand-logo .logoHms {
+    width: 100%;
+    margin-left: 20%;
+}
+
+.quixnav .quixnav-scroll {
+    position: relative;
+    height: 88%;
+}
+
+
+.dashboard-compact .dashboard-nav {
+    display: none;
+}
+
+
+
+
+
+  @media (max-width: 600px) {
+	  .fa-arrow-left{
+		  font-size:15px;
+		  margin-left:0;
+	  }
+	  
+	  
+	  .nameOfUser{
+		  font-size:8px;
+	  }
+	  
+	  .bank_logo{
+		  width:35%;
+	  }
+            .brand-logo {
+                display: none;
+            }
+            .logoHms {
+    width: 80%;
+    margin-left: 20%;
+}
+        }
+        
+        
+        @media (max-width:425px){
+	.dropdown-menu {
+    top: 180%;
+	}
+}
+
+        

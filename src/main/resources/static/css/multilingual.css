@@ -1,0 +1,36 @@
+
+
+ .VIpgJd-ZVi9od-ORHb-OEVmcd.skiptranslate , .goog-te-gadget-icon {
+        display:none !important;
+    }
+    
+    
+    goog-te-gadget-simple{
+		border: 2px solid #443ea2;border-radius: 5px;
+		
+	}
+    
+    .goog-tooltip{
+     display:none !important;
+    }
+    
+    .goog-tooltip:hover{
+     display:none !important;
+    }
+    
+    .goog-text-highlight{
+      background-color: transparent !important;
+      border:none! important;
+      box-shadow: none !important;
+    }
+    
+    body{
+    top: 0px !important;
+    }
+    
+    
+    .translateENToHI{
+display: inline-block;
+  text-transform: uppercase; font-size: 12px; padding: 5px 10px;
+   width:120px; cursor: pointer;
+}

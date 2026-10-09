@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Daily Report – DI-HMS</title>
+<style>
+  body, table, td { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+  table { border-collapse:collapse; }
+  img { border:0; line-height:100%; outline:none; text-decoration:none; }
+
+  .drh-scroll-wrap {
+    border-radius:8px;
+    overflow:hidden;
+    border:1.5px solid #d0e8f5;
+    margin-bottom:22px;
+  }
+
+  @media only screen and (max-width:600px) {
+    .drh-container { width:100% !important; border-radius:0 !important; }
+    .drh-header { padding:20px 18px !important; }
+    .drh-header-title { font-size:15px !important; }
+    .drh-header-sub { font-size:9.5px !important; }
+    .drh-strip { padding:9px 18px !important; font-size:9.5px !important; }
+    .drh-body { padding:18px 16px !important; }
+    .drh-section-label { font-size:9px !important; }
+    .drh-website-box { padding:12px !important; }
+    .drh-footer { font-size:11.5px !important; }
+
+    /* Mobile: switch table back to natural width + horizontal scroll
+       instead of squeezing columns (which breaks words into letters). */
+    .drh-scroll-wrap {
+      overflow-x:auto !important;
+      -webkit-overflow-scrolling:touch !important;
+    }
+    .drh-table {
+      table-layout:auto !important;
+      width:auto !important;
+    }
+    .drh-table-ov { min-width:620px !important; }
+    .drh-table-pd { min-width:680px !important; }
+    .drh-table th, .drh-table td {
+      width:auto !important;
+      white-space:nowrap !important;
+      word-wrap:normal !important;
+      padding:8px 10px !important;
+      font-size:11px !important;
+    }
+    .drh-table th { font-size:9px !important; }
+  }
+</style>
+</head>
+<body style="font-family:Arial,sans-serif;background:#f0f6fb;color:#1a2b3c;padding:30px 16px;margin:0;">
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:700px;width:100%;margin:0 auto;">
+<tr><td>
+<div class="drh-container" style="max-width:700px;width:100%;background:#ffffff;border-radius:14px;overflow:hidden;box-shadow:0 8px 40px rgba(2,139,215,0.15);margin:0 auto;">
+
+  <!-- HEADER -->
+  <div class="drh-header" style="background:linear-gradient(135deg,#028BD7,#0267a0);padding:28px 36px;box-sizing:border-box;">
+    <div class="drh-header-title" style="font-family:Arial,sans-serif;font-size:18px;font-weight:800;color:#ffffff;margin-bottom:4px;">
+      Digitals Monitoring Centre
+    </div>
+    <div class="drh-header-sub" style="font-size:11px;color:rgba(255,255,255,0.75);">
+      Digitals India Security Products Pvt. Ltd. — Corporate Office, Noida
+    </div>
+  </div>
+
+  <!-- STRIP -->
+  <div class="drh-strip" style="padding:10px 28px;font-size:10.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;background:#e8f5e9;border-left:4px solid #2e7d32;color:#1b5e20;">
+    📊 Daily Health Monitoring Report
+  </div>
+
+  <!-- BODY -->
+  <div class="drh-body" style="padding:28px 36px;">
+
+    <p style="font-weight:600;font-size:13.5px;margin-bottom:8px;margin-top:0;">Dear Sir / Mam,</p>
+
+    <p style="font-size:13px;line-height:1.8;color:#4a5a6a;margin-bottom:22px;margin-top:0;">
+      The daily report for health monitoring at <strong>{{recipient_name}}</strong> is as follows:
+    </p>
+
+    <!-- ================================================ -->
+    <!--  ZONE / BRANCH MODE — overview_rows + pending_rows -->
+    <!-- ================================================ -->
+    <!--{{#if_zone}}-->
+
+      <!-- OVERVIEW SECTION LABEL -->
+      <div class="drh-section-label" style="font-family:Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#028BD7;margin-bottom:9px;text-decoration:underline;">
+        Overview
+      </div>
+
+      <!-- OVERVIEW TABLE — fluid % on desktop, scrollable natural-width on mobile -->
+      <div class="drh-scroll-wrap">
+        <table class="drh-table drh-table-ov" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:collapse;font-size:11px;">
+          <thead>
+            <tr>
+              <th style="width:16%;background:#028BD7;color:#ffffff;padding:9px 6px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:8.5px;letter-spacing:0.4px;text-transform:uppercase;word-wrap:break-word;">Product</th>
+              <th style="width:12%;background:#028BD7;color:#ffffff;padding:9px 6px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:8.5px;letter-spacing:0.4px;text-transform:uppercase;word-wrap:break-word;">Total<br/>Branches</th>
+              <th style="width:14%;background:#028BD7;color:#ffffff;padding:9px 6px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:8.5px;letter-spacing:0.4px;text-transform:uppercase;word-wrap:break-word;">System<br/>Installed</th>
+              <th style="width:12%;background:#028BD7;color:#ffffff;padding:9px 6px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:8.5px;letter-spacing:0.4px;text-transform:uppercase;word-wrap:break-word;">Working</th>
+              <th style="width:16%;background:#028BD7;color:#ffffff;padding:9px 6px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:8.5px;letter-spacing:0.4px;text-transform:uppercase;word-wrap:break-word;">Partially<br/>Working</th>
+              <th style="width:14%;background:#028BD7;color:#ffffff;padding:9px 6px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:8.5px;letter-spacing:0.4px;text-transform:uppercase;word-wrap:break-word;">Not<br/>Working</th>
+              <th style="width:12%;background:#028BD7;color:#ffffff;padding:9px 6px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:8.5px;letter-spacing:0.4px;text-transform:uppercase;word-wrap:break-word;">No Info</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{overview_rows}}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- PENDING ISSUES SECTION LABEL -->
+      <div class="drh-section-label" style="font-family:Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#028BD7;margin-bottom:9px;text-decoration:underline;">
+        Pending Issues
+      </div>
+
+      <!-- PENDING ISSUES TABLE — fluid % on desktop, scrollable natural-width on mobile -->
+      <div class="drh-scroll-wrap">
+        <table class="drh-table drh-table-pd" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:collapse;font-size:11px;">
+          <thead>
+            <tr>
+              <th style="width:10%;background:#028BD7;color:#ffffff;padding:9px 6px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:8.5px;letter-spacing:0.4px;text-transform:uppercase;word-wrap:break-word;">Ticket<br/>No.</th>
+              <th style="width:14%;background:#028BD7;color:#ffffff;padding:9px 6px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:8.5px;letter-spacing:0.4px;text-transform:uppercase;word-wrap:break-word;">Branch<br/>Name</th>
+              <th style="width:10%;background:#028BD7;color:#ffffff;padding:9px 6px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:8.5px;letter-spacing:0.4px;text-transform:uppercase;word-wrap:break-word;">Product</th>
+              <th style="width:14%;background:#028BD7;color:#ffffff;padding:9px 6px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:8.5px;letter-spacing:0.4px;text-transform:uppercase;word-wrap:break-word;">Alert</th>
+              <th style="width:12%;background:#028BD7;color:#ffffff;padding:9px 6px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:8.5px;letter-spacing:0.4px;text-transform:uppercase;word-wrap:break-word;">S.I.<br/>Name</th>
+              <th style="width:14%;background:#028BD7;color:#ffffff;padding:9px 6px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:8.5px;letter-spacing:0.4px;text-transform:uppercase;word-wrap:break-word;">Dt. of<br/>First Info</th>
+              <th style="width:14%;background:#028BD7;color:#ffffff;padding:9px 6px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:8.5px;letter-spacing:0.4px;text-transform:uppercase;word-wrap:break-word;">Reminder<br/>Sent On</th>
+              <th style="width:12%;background:#028BD7;color:#ffffff;padding:9px 6px;text-align:left;font-family:Arial,sans-serif;font-weight:700;font-size:8.5px;letter-spacing:0.4px;text-transform:uppercase;word-wrap:break-word;">Current<br/>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{pending_rows}}
+          </tbody>
+        </table>
+      </div>
+
+ <!--   {{/if_zone}} -->
+
+    <!-- ================================================ -->
+    <!--  HEAD OFFICE MODE — one section block per Zone   -->
+    <!-- ================================================ -->
+    {{zone_sections}}
+
+    <!-- WEBSITE BOX -->
+    <div class="drh-website-box" style="text-align:center;padding:14px;border:1.5px dashed #d0e8f5;border-radius:8px;margin-bottom:20px;">
+      <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#5a7080;margin-bottom:4px;margin-top:0;">
+        For More Information, Kindly Log Onto &amp; Login Using Your Credentials
+      </p>
+      <a href="http://www.digitalshealthmonitoring.in" target="_blank"
+         style="font-family:Arial,sans-serif;font-weight:800;font-size:13px;color:#028BD7;text-decoration:underline;">
+        WWW.DIGITALSHEALTHMONITORING.IN
+      </a>
+    </div>
+
+    <p style="font-family:Arial,sans-serif;font-weight:700;font-size:13px;color:#028BD7;margin-bottom:22px;margin-top:0;">
+      Thanking You!
+    </p>
+
+    <!-- DIVIDER -->
+    <div style="height:1.5px;background:linear-gradient(to right,#028BD7,#e8f4fc);margin-bottom:18px;"></div>
+
+    <!-- FOOTER -->
+    <div class="drh-footer" style="font-size:12.5px;line-height:1.9;color:#4a5a6a;">
+      <div style="font-weight:600;color:#1a2b3c;margin-bottom:4px;">Warm Regards,</div>
+      Digitals Monitoring Centre,<br/>
+      <span style="font-family:Arial,sans-serif;font-weight:800;font-size:13px;color:#028BD7;">
+        DIGITALS INDIA SECURITY PRODUCTS PVT. LTD.
+      </span><br/>
+      Corporate Office, Noida<br/>
+      {{phone}} | <a href="mailto:cms@digitalsindia.com" style="color:#028BD7;">cms@digitalsindia.com</a>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div style="background:#028BD7;padding:11px 28px;">
+    <table width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <td style="font-size:10px;color:rgba(255,255,255,0.7);">© Digitals India Security Products Pvt. Ltd.</td>
+        <td style="font-size:10px;color:rgba(255,255,255,0.7);text-align:right;">Confidential Communication</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+</td></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,288 @@
+/*-------------------------------------------------SCROLL BAR----------------------------------------------------------*/
+ *::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #028bd7;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+  }
+ /*-------------------------------------HMS EMPLOYEE MASTER STYLING--------------------------------------------------*/
+
+body {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: #028bd7;
+    text-align: left;
+      background-color: #f9f9f9;
+    overflow-x: hidden;
+   
+}
+
+ #formFile {
+            display: none;
+        }
+/*-------------------------------------------DATATABLE STYLING--------------------------------------------------------*/
+
+table th{
+	background-color: #028bd7;
+	color:#ffffff;
+}
+
+.dataTables_wrapper{
+margin:2%;
+}
+
+input[type="file"] {
+    background-color: #ffffff;
+    color: #003d87;
+}
+
+
+/*.card-container {
+    display: flex;
+    justify-content: space-between;
+}
+*/
+.card-container .card {
+	
+    flex: 1;
+    position: relative;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 2px solid #003d87;
+    border-radius: 5px;
+    box-shadow: 20px 20px 10px grey;
+}
+
+
+
+.card-body {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    
+}
+
+.card-header {
+    padding:0;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 2px solid #028bd7;
+    text-align: center;
+}
+
+
+/*-----------------------------------------------FORM FIELDS STYLING--------------------------------------------*/
+
+
+.custom-field {
+  position: relative;
+  font-size: 14px;
+  border-top: 10px solid transparent;
+  margin-bottom: 0;
+  display: inline-block;
+  --field-padding: 2px;
+}
+
+.custom-field input{
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #f2f2f2;
+  border-radius: 3px;
+  outline: none;
+  font-size: 15px;
+}
+
+.custom-field .placeholder {
+  position: absolute;
+  left:25px;
+  width: calc(100% - (var(--field-padding) * 1));
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  top:15px;
+  line-height: 100%;
+  transform: translateY(-50%);
+  color: #aaa;
+  transition: 
+    top 0.3s ease,
+    color 0.3s ease,
+    font-size 0.3s ease;
+}
+
+.custom-field input.dirty + .placeholder,
+.custom-field input:focus + .placeholder,
+.custom-field input:not(:placeholder-shown) + .placeholder {
+  top: -10px;
+  font-size: 15px;
+  color: #028bd7;
+}
+
+.custom-field.one input {
+  background: none;
+  border: 1px solid #028bd7;
+  transition: border-color 0.3s ease;
+}
+
+ .row .select {
+	 
+	border:1.5px solid #028bd7;
+}
+
+
+
+.row .select:focus,
+.custom-field.one input:not(:placeholder-shown),
+.custom-field.one input:focus {
+  border-color: #003d87;
+  transition-delay: 0.1s
+}
+
+
+
+.custom-field.one input.dirty + .placeholder,
+.custom-field.one input:not(:placeholder-shown) + .placeholder,
+.custom-field.one input:focus + .placeholder {
+  top: 0;
+  font-size: 14px;
+  color:#003d87;
+  background: #fff;
+  width: auto
+}
+
+
+
+
+
+/*------------------------------------------------FORM BUTTON---------------------------------------------------------*/
+
+.form-btn .btn {
+	float: right;
+	margin-left:3px;
+	margin-bottom: 3px;
+	height:30px;
+	font-size:13px;
+	font-weight: 600;
+}
+
+
+
+.heading{
+color: #ffffff;
+background-color: #003d87; 
+height:30px; 
+border-bottom: 2px solid #028bd7;  
+border-left: 20px solid #028bd7;
+padding-left: 20px;
+border-radius: 5px;
+}
+
+
+.row .importButton{
+	float:right;
+	background: #028bd7;
+	color:white;
+}
+
+.row .importButton:hover{
+	background: #003d87;
+	color:white;
+}
+
+.row .col-form-label{
+	font-size:13px;
+	font-weight: 600;
+	color:#028bd7;
+	
+}
+
+.row .form-control{
+	font-size:12px;
+	font-weight: 600;
+	border:1.25px solid #028bd7;
+}
+ 
+ 
+ /* -----------------------------------------------------DROP DOWN--------------------------------------------------- */
+.input-boxx.active-greyy {
+  .input-11 {
+    border: 1.25px solid #003d87;
+  }
+  .input-labell {
+    color: #003d87;
+    top: -10px;
+    background: #fff;
+    font-size: 13px;
+    transition: 250ms;
+
+  
+  }
+}
+.input-boxx {
+  position: relative;
+  .input-labell {
+    position: absolute;
+    left:15px;
+    color: #aaa;
+    font-size: 13px;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: 250ms;
+    user-select: none;
+    pointer-events: none;
+    svg {
+      position: relative;
+      width: 15px;
+      height: 15px;
+      top: 2px;
+      transition: 2top 0.3s ease,
+      color 0.3s ease,
+      font-size 0.3s ease;;
+    }
+  }
+  .input-11 {
+    box-sizing: border-box;
+    height: 30px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1.25px solid #003d87 ;
+
+    transition: 250ms;
+    &:focus {
+      outline: none;
+      background: #fff;
+      border: 1.25px solid #003d87;
+      transition: 250ms;
+    }
+  }
+}
+
+@media (max-width: 1043px) {
+    .card-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-container .col-md-4,
+    .card-container .col-md-8 {
+        width: 100%;
+    }
+}
+ 
+
+ 
